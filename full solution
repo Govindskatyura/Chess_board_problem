@@ -1,0 +1,41 @@
+Pwn=[0,0]
+path=[]
+PawnsCor=[]
+#input
+#NumPwn=input("enter the no of pawns")
+Num=int(input("enter the no of pawns"))
+for p in range(0,Num):
+    temp=[]
+    tempX,tempY=map(int,input().split(' '))
+    temp.append(tempX)
+    temp.append(tempY)
+    PawnsCor.append(temp)
+    p +=1
+#PawnsCor.sort()
+#print(min(PawnsCor))
+#print(min(PawnsCor))
+#path
+l=[]
+x=0
+y=0
+while(x<8):
+    for y in range(0,9):
+        new=[]
+        if(Num>0):
+            l=min(PawnsCor)
+            if(x==l[0] and y==l[1]):
+                print(l)
+                if(PawnsCor.remove !=0):
+                    PawnsCor.remove(min(PawnsCor))
+                l=min(PawnsCor)
+
+                #print(l)
+                x =x+1
+                #continue
+            Num -=1
+        new.append(x)
+        new.append(y)
+        path.append(new)
+        y +=1
+    break
+print(path)
